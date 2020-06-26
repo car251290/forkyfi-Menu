@@ -66,13 +66,20 @@ const controlRecipe =() => {
     if(id){
 
         //prepare ui for changes
+        
 
         //create new recipe object
         state.recipe = new Recipe(id);
+
+        //global window objet to have acces to the state and the recipe
+       // window.r=state.recipe;
         
         try{
-            //get recipe data
+            //get recipe data and fetche the parseIngredients
+
         await state.recipe.getRecipe();
+        console.log(state.recipe.ingredients)
+        state.recipe.parseIngredients();
 
         //calculate serving 
         state.recipe.calcTime();
