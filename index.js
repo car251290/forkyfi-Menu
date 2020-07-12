@@ -1,6 +1,6 @@
 import Search from '../models/Search';
 import {elements,renderLoader,clearLoader} from './views/base'
-import * as searchView from './views/searchView'
+import * as recipeView from './views/recipeView'
 import { elementsSting } from '../views/base';
 import Recipe from '../models/Recipe';
 
@@ -66,7 +66,10 @@ const controlRecipe =() => {
     if(id){
 
         //prepare ui for changes
-        
+        renderLoader(element.recipe);
+
+        //hight the lightselector
+        if (state.search) searchView.highlightSelected(id);
 
         //create new recipe object
         state.recipe = new Recipe(id);
@@ -87,6 +90,7 @@ const controlRecipe =() => {
 
         // render recipe
         console.log(state.recipe)
+        recipeView.renderRecipe(state.recipe);
  
         } catch(err) {
             alert('error in the recipe')

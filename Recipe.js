@@ -36,6 +36,7 @@ export default class Recipe{
     parseIngredients() {
         const unitsLongs = ['tablespoons', 'tablespoon','ounce','ounces','teaspoon','teaspoons'];
         const unitsShort = ['tbsp','tbsp','oz','oz','tsp','tsp','cup','pound'];
+        const unit = [...unitsShort,'kg','g']
 
 
         const newIngredients = this.ingredients.map(el =>{
@@ -69,6 +70,7 @@ export default class Recipe{
                 };
 
                 // example cups and arrCount
+
 
 
 
