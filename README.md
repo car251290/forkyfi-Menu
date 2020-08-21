@@ -20,7 +20,9 @@ The Null type has exactly one value, called null.
 # The Boolean Type
 The Boolean type represents a logical entity having two values, called true and false.
 
-# ECMAScript operations that do not interpret String contents apply no further semantics. Operations that do interpret String values treat each element as a single UTF-16 code unit
+# ECMAScript 
+1- operations that do not interpret String contents apply no further semantics. 
+2- Operations that do interpret String values treat each element as a single UTF-16 code unit
 
 
 
